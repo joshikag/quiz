@@ -1,0 +1,58 @@
+body{
+    background-image: url("https://blenderartists.org/uploads/default/original/4X/7/e/2/7e2d7bea4ac21388c4a96e1371f375c4ce00094b.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    background-position: center center;
+    background-attachment: fixed;
+    overflow:scroll;
+}
+h1{
+    color:whitesmoke;
+    text-align: center;
+}
+.container{
+    color:whitesmoke
+}
+input[type='submit']{
+	background:#f06226;
+	border:0;
+	color:#fff;
+	padding:10px 15px;
+	cursor:pointer;
+}
+.jumbotron{
+    padding: 20px;
+    margin: 50px;
+    color:black;
+    align-items: center;
+    align-self: center;
+    
+}
+.jumbotron .container{
+    max-width: 100%;
+}
+
+#results h3{
+	background:#f06226;
+	padding:10px;
+	margin:10px 0;
+}
+
+#results span{
+	color:white;
+	font-weight:bold;
+}
+#timer{
+    margin:10px;
+    padding:10px 0.01px;
+    position: absolute;
+    right:100px;
+    border:20px;
+    left:50px;
+    
+
+}
+h6{
+    color: whitesmoke;
+}

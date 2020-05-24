@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Quiz</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="icon" href="https://twemoji.maxcdn.com/2/svg/1f311.svg">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script language="javascript" src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/addons/p5.sound.min.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="quizs.css">
+    <script src="quiz.js"></script>
+</head>
+<body onload="countdown();">
+    <div> 
+        <h6>Time Left :</h6>
+        <input id="minutes" type="text" style="width: 10px; 
+             border: none; font-size: 16px;  
+            font-weight: bold; color: black;">
+                      
+        <input id="seconds" type="text" style="width: 20px; 
+                        border: none; font-size: 16px; 
+                        font-weight: bold; color: black;"> 
+    </div> 
+    <div class="container">
+        <h1>This quiz is for 10 minutes. Good luck!</h1>
+        <div class="jumbotron">
+            <section>  
+                <div id="results"></div>
+                <form name="quizForm" onsubmit="return submitAnswers()">
+                    <h3>Q1.What is the closest planet to the sun?</h3>
+                    <input type="radio" name="q1" value="a" id="q1a">a. Mercury<br>
+                    <input type="radio" name="q1" value="b" id="q1b">b. Jupiter<br>
+                    <input type="radio" name="q1" value="c" id="q1c">c. Earth<br>
+                    <input type="radio" name="q1" value="d" id="q1d">d. Mars<br>
+                    <h3>Q2.Ganymede is a moon of which planet? </h3>
+                    <input type="radio" name="q2" value="a" id="q2a">a. Saturn<br>
+                    <input type="radio" name="q2" value="b" id="q2b">b. Jupiter<br>
+                    <input type="radio" name="q2" value="c" id="q2c">c. Earth<br>
+                    <input type="radio" name="q2" value="d" id="q2d">d. Mars<br>
+        
+                    <h3>Q3.What is the name of NASA’s most famous space telescope?</h3>
+                    <input type="radio" name="q3" value="a" id="q3a">a. Ridon<br>
+                    <input type="radio" name="q3" value="b" id="q3b">b. Aryabhatta<br>
+                    <input type="radio" name="q3" value="c" id="q3c">c. Sporlow<br>
+                    <input type="radio" name="q3" value="d" id="q3d">d. Hubble Space<br>
+    
+                    <h3>Q4.Who was the first person to walk on the moon?</h3>
+                    <input type="radio" name="q4" value="a" id="q4a">a. Neil Armstrong<br>
+                    <input type="radio" name="q4" value="b" id="q4b">b. Matthew McConaughey<br>
+                    <input type="radio" name="q4" value="c" id="q4c">c. Bill Arnold<br>
+                    <input type="radio" name="q4" value="d" id="q4d">d. Donald Trump<br>
+    
+                    <h3>Q5.The day on which the Sun’s direct rays cross the celestial equator is called:</h3>
+                    <input type="radio" name="q5" value="a" id="q5a">a. ecliptic <br>
+                    <input type="radio" name="q5" value="b" id="q5b">b. solstice <br>
+                    <input type="radio" name="q5" value="c" id="q5c">c. equinox <br>
+                    <input type="radio" name="q5" value="d" id="q5d">d. easter <br>
+                    <h3>Q6.Who invented the telescope?</h3>
+                    <input type="radio" name="q6" value="a" id="q6a">a. Galileo <br>
+                    <input type="radio" name="q6" value="b" id="q6b">b. Archimedes<br>
+                    <input type="radio" name="q6" value="c" id="q6c">c. Hans Lippershey<br>
+                    <input type="radio" name="q6" value="d" id="q6d">d. Johannes Kepler <br>
+
+                    <h3>Q7.Which of these objects is the farthest from the Sun?</h3>
+                    <input type="radio" name="q7" value="a" id="q7a">a. Saturn <br>
+                    <input type="radio" name="q7" value="b" id="q7b">b. 90377 Sedna <br>
+                    <input type="radio" name="q7" value="c" id="q7c">c. Kuiper Belt <br>
+                    <input type="radio" name="q7" value="d" id="q7d">d. Jupiter <br>
+
+                    <h3>Q8.What term describes the alignment of three celestial bodies?</h3>
+                    <input type="radio" name="q8" value="a" id="q8a">a. sizzle <br>
+                    <input type="radio" name="q8" value="b" id="q8b">b. symbology <br>
+                    <input type="radio" name="q8" value="c" id="q8c">c. suzerainty <br>
+                    <input type="radio" name="q8" value="d" id="q8d">d. syzygy <br>
+
+                    <h3>Q9.What is the visible part of the Sun called?</h3>
+                    <input type="radio" name="q9" value="a" id="q9a">a. photosphere <br>
+                    <input type="radio" name="q9" value="b" id="q9b">b. stratosphere <br>
+                    <input type="radio" name="q9" value="c" id="q9c">c. lithosphere <br>
+                    <input type="radio" name="q9" value="d" id="q9d">d. atmosphere <br>
+
+                    <h3>Q10.What makes a planet a dwarf planet?</h3>
+                    <input type="radio" name="q10" value="a" id="q10a">a. distance from sun <br>
+                    <input type="radio" name="q10" value="b" id="q10b">b. color <br>
+                    <input type="radio" name="q10" value="c" id="q10c">c. size and shape <br>
+                    <input type="radio" name="q10" value="d" id="q10d">d. smell <br>
+
+                    <br>
+                    <input type="submit" value="Submit Answers">
+                        
+                </form> 
+                    
+            </section>
+        </div>
+    </div>
+</body>
+</html>
